@@ -52,6 +52,7 @@ body {
   background-color: yellow;
 }
 
+/*響應式選單*/
 .allmenu {
   position: absolute;
   top: 0;
@@ -97,7 +98,7 @@ body {
   width: 89vw;
   height: 3vw;
   background-color: rgb(6, 38, 61);
-  opacity: 0.9;
+  opacity: 1;
   padding: 1rem 5%;
   position: fixed;
   box-shadow: 0 5px 5px rgb(6, 38, 61);
@@ -124,6 +125,7 @@ body {
 .dropdown ul li {
   display: inline;
   margin-right: 4vw;
+  
 }
 
 .dropdown ul li:hover {
@@ -131,13 +133,13 @@ body {
   padding: 20px;
 }
 
-/*.dropdown ul li a {
-  font-size: 14px;
+.dropdown ul li a {
+  font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
   color:#fff;
-}*/
+}
 
 .dropdown > ul > li > a {
   color: #fff;
