@@ -1,0 +1,351 @@
+/* 全域樣式 */
+* {
+  margin: 0;
+  padding: 0;
+  /*box-sizing: border-box;*/
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* 導覽列 */
+.menu{
+  display: none;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 60px; /* 導覽列高度 */
+  left: 0;
+  right: 0;
+  background-color: rgb(6, 38, 61);
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  opacity: 1;
+  z-index: 999;
+  width: 100%;
+  height: 100vw;
+}
+
+/* 每個選單項目橫向排版：文字 + 箭頭 */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.menu-item a {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 箭頭樣式 */
+.menu-item .arrow {
+  overflow: visible;
+  font-size: 1.5rem;
+  color: #efefef;
+  background-color: yellow;
+}
+
+.allmenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vw;
+  background-color: #ffffff; 
+  padding: 2rem;
+  z-index: 1000;
+}
+
+.allmenu .submenu-header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.allmenu .submenu-header a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.allmenu .menu-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.allmenu .menu-item a {
+  color: #000000;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  width: 89vw;
+  height: 3vw;
+  background-color: rgb(6, 38, 61);
+  opacity: 0.9;
+  padding: 1rem 5%;
+  position: fixed;
+  box-shadow: 0 5px 5px rgb(6, 38, 61);
+
+}
+
+.navbar .logo img {
+  width: 80%;
+  height: 100%;
+  
+}
+
+
+
+.dropdown ul {
+  
+   list-style: none;
+   position: absolute;
+   right: 5vw;
+   top:0;
+   line-height: 80px;
+}
+
+.dropdown ul li {
+  display: inline;
+  margin-right: 4vw;
+}
+
+.dropdown ul li:hover {
+  background-color: #efefef;
+  padding: 20px;
+}
+
+/*.dropdown ul li a {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  color:#fff;
+}*/
+
+.dropdown > ul > li > a {
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* 下拉選單內連結（黑色） */
+.dropdown-menu a {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.dropdown-menu .row a {
+  display: block;
+  margin-bottom: 2px; /* 可選：增加間距 */
+}
+
+.dropdown ul li a:hover {
+  color: #00a0e9;
+}
+
+.dropdown ul li .dropdown-menu {
+  position: absolute;
+  left: 0 ;
+  top: 70px;
+  background-color: #efefef;
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  z-index: 2;
+  justify-content: space-around;
+  opacity: 1;
+  visibility: hidden;
+}
+
+.dropdown ul li .dropdown-menu .row:not(:last-child) {
+  padding-right: 20px;
+}
+
+.dropdown ul li .dropdown-menu .row:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.dropdown ul li:hover .dropdown-menu{
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 主視覺 */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #000;
+  background-image: url("/indexpic/Security.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+
+.hero h1{
+  
+  color: white;
+  z-index: 1;
+}
+
+.marquee-bg {
+  position: absolute;
+  top: 2%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 1; /* 透明度可調整 */
+}
+
+/*.hero-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-60%, -50%);  
+  z-index: 1;
+  color:#ffffff;
+  text-align: center;
+  top: 40%;
+}*/
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:#ffffff;
+  font-size: 40px;
+  line-height: 40px;
+  margin-top: -40px;
+}
+
+.hero-button {
+  position: absolute;
+  top:80%;
+}
+.cta-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+
+}
+.cta-button:hover{
+  background-color: #00a0e9;
+}
+
+
+/* 服務區塊 */
+.services {
+  padding: 3rem 10%;
+  min-height: 90vh;
+}
+.services h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.service-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.service-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 280px;
+}
+
+/* 頁尾 */
+.footer {
+  background-color: #002e5b;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+
+/************************************/
+
+
+
+
+/*響應式設計語法*/
+@media screen and (max-width: 768px){
+  .dropdown {
+    display: none;
+  }
+  .navbar{
+    height: 5vw;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem; 
+    flex: 0 0 auto;      
+    margin: 0 auto;       
+    text-align: center;  
+
+  }
+  .navbar .logo img {
+    
+    max-height: 40px;    
+    height: auto;
+    width: auto;
+    display: inline-block;
+  }
+  .hero-text{
+    font-size: 30px;
+  }
+  .menu{
+    display: block;
+    background-color: transparent;
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    border: none;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 769px) {
+  .dropdown {
+    display: block;
+  }
+}
+
+  
+

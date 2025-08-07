@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeLink 博創資訊</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header 導覽列 -->
+  <header class="navbar">
+    <button class="menu">&#9776;</button>
+
+    <div class="logo">
+      <img src="/indexpic/logo.jpg" alt="SafeLink Logo">
+    </div>
+    <nav>
+      
+        <div class="dropdown">
+          <ul>
+            <li><a>關於我們</a>
+              <div class="dropdown-menu">
+                <div class="row">
+                  <a href='/about/aboutus/index.html'>關於博創</a>
+                  <a href='/about/corpartner/index.html'>企業文化</a>
+                  <a href='/about/corpculture/index.html'>服務據點</a>
+                  <a href='/about/servlocate/index.html'>企業夥伴</a>
+                </div>
+              </div>
+            </li>
+            <li><a>服務項目</a>
+              <div class="dropdown-menu">
+                <div class="row">
+                  <a href='/service/personalcons/index.html'>個資保護顧問服務</a>
+                  <a href='/service/detectserv/index.html'>資安防護顧問服務</a>
+                  <a href='/service/inforcons/index.html'>資安檢測技術服務</a>
+                  <a href="#">資安技術解決方案</a>
+                  <a href="#">企業管理顧問服務</a>
+                  <a href="#">網站規劃設計服務</a>
+                  <a href="#">輔導實績</a>
+                </div>
+              </div>
+            </li>
+            <li><a>教育訓練</a>
+              <div class="dropdown-menu">
+                <div class="row">
+                  <a href='/training/ISMS/index.html'>資訊安全管理領域</a>
+                  <a href='/training/PIMS/index.html'>個人資料管理領域</a>
+                  <a href='/training/businessfield/index.html'>企業管理領域</a>
+                  <a href="#">隱私權保護政策</a>
+                </div>
+
+              </div>
+            </li>
+            <li><a>活動訊息</a>
+              <div class="dropdown-menu">
+                <div class="row">
+                  <a href='/eventmsg/coursinfo/index.html'>課程訊息</a>
+                  <a href="#">課程訊息</a>
+                  <a href='/eventmsg/pims/index.html'>個人資料管理領域</a>
+                </div>
+              </div>
+            </li>
+            <li><a>新知分享</a>
+              <div class="dropdown-menu">
+                <div class="row">
+                  <a href='/news/ISO/index.html'>ISO國際認證</a>
+                  <a href='/news/infonews/index.html'>資訊安全新知</a>
+                  <a href='/news/workmanage/index.html'>職場經營</a>
+                </div>
+              </div>
+            </li>
+            <li><a>顧問團隊</a>
+              <div class="dropdown-menu">
+                <div class="row">
+                  <a href="#"></a>
+                  <a href="#"></a>
+                  <a href="#"></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      
+    </nav>
+   
+  
+    <!-- 新增在 header 後面 -->
+    <div id="mobileMenu" class="mobile-menu" style="display: none;">
+    <!--響應式設計選單-->
+    <div id="react-mobile-menu-root"></div>
+     
+    
+  </header>
+
+  <main>
+  
+  <!-- 主視覺區塊 -->
+    <section class="hero">
+
+      <!--前景文字內容-->
+      <div class="hero-text">
+        <h1><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Is security</b></h1><br>
+        <h1><b>only about&nbsp;&nbsp;&nbsp;&nbsp;</b></h1><br/>
+        <h1><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physical</b></h1><br/>
+        <h1><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;protection?&nbsp;&nbsp;&nbsp;&nbsp;</b></h1>
+      </div>
+      <div class="hero-button">
+        <a href="#" class="cta-button">立即諮詢&nbsp;&#8594;</a>
+      </div>
+    </section>
+
+
+    <!-- 服務項目 -->
+    <section class="services">
+      <h2>我們的服務</h2>
+      <!--使用react的模組縮減成一行-->
+      <div id="react-service-root" class="service-grid"></div>
+    </section>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <p>&copy; 2025 SafeLink 博創資訊股份有限公司 | 地址：台中市xx區xx路xxx號 | 電話：(04) 2525-0535</p>
+  </footer>
+
+  <!--React核心程式-->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+  <!--Babel可以直接寫JSX-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!--React元件程式碼(type 必須是text/babel-->
+  <script type="text/babel">
+  
+  //用陣列存內容
+  const services = [
+    {
+      title: '個資保護顧問服務',
+      description: '提供 ISO 29100、TPIPAS、CNS29100 & 29191等個資顧問服務'
+    },
+    {
+      title: '資安檢測技術服務',
+      description: '提供滲透測試、弱點掃描、風險評估與社交工程等服務'
+    },
+    {
+      title: '資安管理顧問服務',
+      description: '提供 ISO 27001(ISMS)、20000(ITSMS)、22301(BCMS)資安專業輔導'
+    },
+    {
+      title: '資安技術解決方案',
+      description: 'Cyber ARK'
+    },
+    {
+      title: '企業管理顧問服務',
+      description: '提供ISO 9001(QMS)、14001、29990、OHSAS 18001管理顧問服務，以及各類活動(績效管理、專安改善、日常管理等......)'
+    },
+    {
+      title: '網站規劃設計服務',
+      description: '三項設計服務任君挑選(專業網站分析、網頁視覺設計、後端管理程式撰寫)'
+    },
+    {
+      title: '輔導實績',
+      description: '豐富的輔導經驗(擁有ISMS、PIMS、QMS、GTP10015等實戰案例)'
+    }
+  ];
+
+  //區塊部分的設計
+  function ServicesSection() {
+    return (
+      <>
+        {services.map((item, index) => (
+          <div className="service-card" key={index}>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </>
+    );
+  }
+
+  // 抓到上面react-service-root的值
+  const root = ReactDOM.createRoot(document.getElementById('react-service-root'));
+  root.render(<ServicesSection />);
+
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector(".menu");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", function () {
+      if (mobileMenu.style.display === "none" || mobileMenu.style.display === "") {
+        mobileMenu.style.display = "block";
+      } else {
+        mobileMenu.style.display = "none";
+      }
+    });
+  });
+</script>
+
+
+<script type="text/babel">
+
+const menuData = {
+  main: [
+    { label: "關於我們", submenu: "about" },
+    { label: "服務項目", submenu: "service" },
+    { label: "教育訓練", submenu: "training" },
+    { label: "活動訊息", submenu: "eventmsg" },
+    { label: "新知分享", submenu: "news" },
+    { label: "顧問團隊", submenu: "teams"}
+  ],
+  about: ["關於博創", "企業文化", "服務據點", "企業夥伴"],
+  service: ["個資保護顧問服務", "資安防護顧問服務", "資安檢測技術服務"],
+  training: ["資訊安全管理領域", "個人資料管理領域", "企業管理領域", "隱私權保護政策"],
+  eventmsg: ["課程訊息", "個人資料管理領域"],
+  news: ["ISO國際認證", "資訊安全新知", "職場經營"],
+  teams: ["ISO", "資訊安全"]
+};
+
+function MobileMenu() {     
+  const [currentMenu, setCurrentMenu] = React.useState("main");
+
+  const goBack = () => setCurrentMenu("main");
+
+  return (
+  <div className="mobile-menu" style={{ display: "block" }}>
+    {currentMenu === "main" ? (
+      menuData.main.map((item, idx) => (
+        <div className="menu-item" key={idx}>
+          <a href="#" onClick={() => setCurrentMenu(item.submenu)}>{item.label}</a>
+        </div>
+      ))
+    ) : (
+      <div className="allmenu">
+        <div className="submenu-header">
+          <a href="#" onClick={goBack}>← 返回</a>
+        </div>
+        {menuData[currentMenu].map((item, idx) => (
+          <div className="menu-item" key={idx}>
+            <a href="#">{item}</a>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+);
+
+}
+
+ReactDOM.createRoot(document.getElementById('react-mobile-menu-root')).render(<MobileMenu />);
+</script>
+
+
+
+</body>
+</html>
+
+
