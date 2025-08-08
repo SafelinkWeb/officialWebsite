@@ -100,8 +100,8 @@ body {
   background-color: rgb(6, 38, 61);
   opacity: 0.95;
   padding: 1rem 5%;
-  position: fixed;
-  box-shadow: 0 5px 5px rgb(6, 38, 61);
+  position: relative;
+  /*box-shadow: 0 5px 5px rgb(6, 38, 61);*/
 
 }
 
@@ -194,7 +194,7 @@ body {
 /* 主視覺 */
 .hero {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -211,7 +211,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 90vh;
   object-fit: cover;
   z-index: 0; /* 在最底層 */
 }
@@ -232,25 +232,16 @@ body {
   opacity: 1; /* 透明度可調整 */
 }
 
-/*.hero-text {
-  position: absolute;
-  left: 50%;
-  transform: translate(-60%, -50%);  
-  z-index: 1;
-  color:#ffffff;
-  text-align: center;
-  top: 40%;
-}*/
 
 .hero-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color:#ffffff;
-  font-size: 40px;
-  line-height: 20px;
-  margin-top: -60px;
+  position: absolute;
+bottom: 30px;
+left: 30px;
+color: #ffffff;
+font-size: 40px;
+line-height: 40px;
+text-align: right;
+
 }
 
 .cta-button {
@@ -268,12 +259,15 @@ body {
 
 /* 服務區塊 */
 .services {
+  display: flex;          /* 讓內容左右排列 */
+  /*align-items: center;     垂直置中圖片與文字 */
   padding: 3rem 10%;
-  min-height: 90vh;
+  min-height: 60vh;       /* 保持原本 services 的高度 */
+  gap: 2rem; 
 }
 .services h2 {
-  text-align: center;
-  margin-bottom: 2rem;
+  flex: 1;                /* 左邊文字佔一半寬度 */
+  margin: 0;
 }
 .service-grid {
   display: flex;
@@ -287,6 +281,19 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   width: 280px;
+}
+
+.aboutuspic {
+  flex: 1;                /* 右邊圖片佔一半寬度 */
+  display: flex;
+  justify-content: center;
+}
+
+.aboutuspic img {
+  max-height: 100%;       /* 高度等於父層（services） */
+  max-width: 100%;        /* 不超過容器寬度 */
+  height: auto;
+  object-fit: cover;      /* 保持比例裁切 */
 }
 
 /* 頁尾 */
