@@ -1,0 +1,85 @@
+/* ===== AboutUs 頁面專屬樣式 ===== */
+
+/* 主視覺 */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  z-index: 0; /* 最底層 */
+}
+
+.hero h1 {
+  color: #fff;
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: #fff;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: right;
+}
+
+.cta-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.cta-button:hover {
+  background-color: #00a0e9;
+}
+
+/* 內容區塊 */
+.services {
+  display: flex;            /* 讓內容左右排列 */
+  padding: 3rem 10%;
+  min-height: 60vh;
+  gap: 2rem;
+}
+
+.services h2 {
+  flex: 1;                  /* 左邊文字佔一半寬度 */
+  margin: 0;
+}
+
+.aboutuspic {
+  flex: 1;                  /* 右邊圖片佔一半寬度 */
+  display: flex;
+  justify-content: center;
+}
+
+.aboutuspic img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 行動版微調 */
+@media screen and (max-width: 768px){
+  .hero-text { font-size: 30px; }
+  .services { display: block; }
+  .aboutuspic { margin-top: 1.5rem; }
+}
