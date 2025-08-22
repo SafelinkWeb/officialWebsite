@@ -29,33 +29,6 @@ body {
   height: 100vw;
 }
 
-/* 行動選單按鈕樣式，讓它長得跟 <a> 一樣 */
-.mobile-menu .menu-item button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background: none;
-  border: 0;
-  padding: 1rem 0;
-  font: inherit;
-  font-size: 1.2rem;
-  color: #fff;
-  text-align: left;
-  cursor: pointer;
-}
-.allmenu .menu-item button {
-  color: #000;
-  font-size: 1.1rem;
-}
-.submenu-header button {
-  background: none;
-  border: 0;
-  padding: 0.25rem 0.5rem;
-  font: inherit;
-  cursor: pointer;
-}
-
 
 /* 每個選單項目橫向排版：文字 + 箭頭 */
 .menu-item {
