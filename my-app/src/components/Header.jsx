@@ -1,4 +1,6 @@
+// src/components/Header.jsx
 import { useState } from 'react'
+import { Link } from 'react-router-dom'   
 import MobileMenu from './MobileMenu.jsx'
 import logo from "../assets/logo.jpg"
 
@@ -18,8 +20,9 @@ export default function Header() {
       </button>
 
       <div className="logo">
-        {/* 圖檔放 public/indexpic/logo.jpg，路徑可直接用 /indexpic/logo.jpg */}
-        <img src={logo} alt="SafeLink Logo" />
+        <Link to="/">                        
+          <img src={logo} alt="SafeLink Logo" />
+        </Link>
       </div>
 
       {/* 桌面版導覽 */}
@@ -29,10 +32,10 @@ export default function Header() {
             <li><a>關於我們</a>
               <div className="dropdown-menu">
                 <div className="row">
-                  <a href="/about/aboutus/index.html">關於博創</a>
-                  <a href="/about/corpartner/index.html">企業文化</a>
-                  <a href="/about/corpculture/index.html">服務據點</a>
-                  <a href="/about/servlocate/index.html">企業夥伴</a>
+                  <Link to="/about/aboutus">關於博創</Link>
+                  <Link to="/about/corpartner">合作夥伴</Link>
+                  <Link to="/about/corpculture">企業文化</Link>
+                  <Link to="/about/servlocate">服務據點</Link>
                 </div>
               </div>
             </li>
@@ -40,13 +43,9 @@ export default function Header() {
             <li><a>服務項目</a>
               <div className="dropdown-menu">
                 <div className="row">
-                  <a href="/service/personalcons/index.html">個資保護顧問服務</a>
-                  <a href="/service/detectserv/index.html">資安防護顧問服務</a>
-                  <a href="/service/inforcons/index.html">資安檢測技術服務</a>
-                  <a href="#">資安技術解決方案</a>
-                  <a href="#">企業管理顧問服務</a>
-                  <a href="#">網站規劃設計服務</a>
-                  <a href="#">輔導實績</a>
+                  <Link to="/service/personalcons">個資保護顧問服務</Link>
+                  <Link to="/service/detectserv">資安防護顧問服務</Link>
+                  <Link to="/service/inforcons">資安檢測技術服務</Link>
                 </div>
               </div>
             </li>
@@ -54,10 +53,9 @@ export default function Header() {
             <li><a>教育訓練</a>
               <div className="dropdown-menu">
                 <div className="row">
-                  <a href="/training/ISMS/index.html">資訊安全管理領域</a>
-                  <a href="/training/PIMS/index.html">個人資料管理領域</a>
-                  <a href="/training/businessfield/index.html">企業管理領域</a>
-                  <a href="#">隱私權保護政策</a>
+                  <Link to="/training/ISMS">資訊安全管理領域</Link>
+                  <Link to="/training/PIMS">個人資料管理領域</Link>
+                  <Link to="/training/businessfield">企業管理領域</Link>
                 </div>
               </div>
             </li>
@@ -65,8 +63,8 @@ export default function Header() {
             <li><a>活動訊息</a>
               <div className="dropdown-menu">
                 <div className="row">
-                  <a href="/eventmsg/coursinfo/index.html">課程訊息</a>
-                  <a href="/eventmsg/pims/index.html">個人資料管理領域</a>
+                  <Link to="/eventmsg/coursinfo">課程訊息</Link>
+                  <Link to="/eventmsg/pims">個人資料管理領域</Link>
                 </div>
               </div>
             </li>
@@ -74,9 +72,9 @@ export default function Header() {
             <li><a>新知分享</a>
               <div className="dropdown-menu">
                 <div className="row">
-                  <a href="/news/ISO/index.html">ISO國際認證</a>
-                  <a href="/news/infonews/index.html">資訊安全新知</a>
-                  <a href="/news/workmanage/index.html">職場經營</a>
+                  <Link to="/news/ISO">ISO國際認證</Link>
+                  <Link to="/news/infonews">資訊安全新知</Link>
+                  <Link to="/news/workmanage">職場經營</Link>
                 </div>
               </div>
             </li>
@@ -84,9 +82,7 @@ export default function Header() {
             <li><a>顧問團隊</a>
               <div className="dropdown-menu">
                 <div className="row">
-                  <a href="#"></a>
-                  <a href="#"></a>
-                  <a href="#"></a>
+                  
                 </div>
               </div>
             </li>
@@ -94,7 +90,7 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* 行動版選單（React 控制顯示/隱藏） */}
+      {/* 行動版選單 */}
       {showMobile && (
         <div id="mobileMenu" className="mobile-menu" style={{ display: 'block' }}>
           <MobileMenu onClose={() => setShowMobile(false)} />

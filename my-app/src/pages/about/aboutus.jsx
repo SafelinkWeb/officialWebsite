@@ -1,9 +1,11 @@
 // src/pages/about/AboutUs.jsx
 import './aboutus.css'
 
+
 export default function AboutUs() {
   return (
     <main>
+      
       {/* 主視覺區塊 */}
       <section className="hero">
         {/* 背景影片（public 目錄下可用絕對路徑） */}
@@ -14,7 +16,7 @@ export default function AboutUs() {
           loop
           playsInline
         >
-          <source src="/about/aboutus/aboutuspic/0807-3.mp4" type="video/mp4" />
+          <source src="/about/aboutuspic/0807-3.mp4" type="video/mp4" />
         </video>
 
         {/* 前景文字（原檔空白，保留結構） */}
